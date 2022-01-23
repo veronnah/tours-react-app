@@ -1,10 +1,12 @@
 .header {
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #77002e;
+  background-color: #443741;
   padding: 0 10%;
 }
 
@@ -29,17 +31,18 @@
 .header a {
   text-decoration: none;
   font-size: 1.5rem;
-  color: #fcb8d2;
+  color: #f5cce9;
+  transition: .3s all;
 }
 
 .header a:hover,
 .header a:active,
 .header a.active {
-  color: white;
+  color: #fff;
 }
 
 .badge {
-  background-color: #cc2062;
+  background-color: #b12faf;
   color: white;
   border-radius: 12px;
   padding: 0 1rem;

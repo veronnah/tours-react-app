@@ -20,10 +20,16 @@
   border: 1px solid #ccc;
   padding: 0.25rem;
   width: 100%;
+  outline: none;
 }
 
-textarea{
-    max-width: 608px;
+.control input:focus,
+.control textarea:focus {
+  border: 1px solid #443741;
+}
+
+textarea {
+  max-width: 100%;
 }
 
 .actions {
@@ -34,16 +40,17 @@ textarea{
 .actions button {
   font: inherit;
   cursor: pointer;
-  background-color: #77002e;
-  color: white;
+  background-color: #443741;
+  color: #fff;
   padding: 0.5rem 1.5rem;
-  border: 1px solid #77002e;
+  border: 1px solid #f5cce9;
   border-radius: 4px;
   font-weight: bold;
+  transition: 0.3s all;
 }
 
 .actions button:hover,
 .actions button:active {
-  background-color: #a50e48;
-  border-color: #a50e48;
+  background-color: #b12faf;
+  background-color: #b12faf;
 }

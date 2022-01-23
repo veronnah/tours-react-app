@@ -1,0 +1,23 @@
+.about__us-box {
+    display: flex;
+}
+
+.about__us-box img {
+    max-width: 600px;
+    margin-right: 20px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about__us-box p {
+    text-align: justify;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.time-badge {
+    background-color: #44374159;
+    border-radius: 4px;
+    padding: 0 20px;
+    color: #443741;
+}

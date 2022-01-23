@@ -1,15 +1,15 @@
 import { useRef } from "react";
 
 import Card from "../ui/Card";
-import classes from "./NewMeetupForm.module.css";
+import classes from "./NewTourForm.module.css";
 
-function NewMeetupForm(props) {
+function NewTourForm(props) {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
   const addressInputRef = useRef();
   const descriptionInputRef = useRef();
 
-  function submitHandler(event) {
+  const submitHandler = (event) => {
     event.preventDefault();
 
     const enteredTitle = titleInputRef.current.value;
@@ -24,18 +24,18 @@ function NewMeetupForm(props) {
       description: enteredDescription,
     };
 
-    props.onAddMeetup(formData);
-  }
+    props.onAddTour(formData);
+  };
 
   return (
     <Card>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
-          <label htmlFor="title">Meetup Title</label>
+          <label htmlFor="title">Title</label>
           <input type="text" required id="title" ref={titleInputRef} />
         </div>
         <div className={classes.control}>
-          <label htmlFor="image">Meetup Image</label>
+          <label htmlFor="image">Image</label>
           <input type="url" required id="image" ref={imageInputRef} />
         </div>
         <div className={classes.control}>
@@ -52,11 +52,11 @@ function NewMeetupForm(props) {
           ></textarea>
         </div>
         <div className={classes.actions}>
-          <button>Add Meetup</button>
+          <button type="submit">Add Tour</button>
         </div>
       </form>
     </Card>
   );
 }
 
-export default NewMeetupForm;
+export default NewTourForm;

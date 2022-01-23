@@ -1,11 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import NewTourForm from "../components/tours/NewTourForm";
 
-import NewMeetupForm from "../components/meetups/NewMeetupForm";
-
-function NewMeetupPage() {
+function NewTourPage() {
   const navigate = useNavigate();
 
-  function addMeetupHandler(formData) {
+  function addTourHandler(formData) {
     fetch("https://react-tours-50729-default-rtdb.firebaseio.com/tours.json", {
       method: "POST",
       body: JSON.stringify(formData),
@@ -19,10 +18,10 @@ function NewMeetupPage() {
 
   return (
     <section>
-      <h2>Add new Meetup</h2>
-      <NewMeetupForm onAddMeetup={addMeetupHandler} />
+      <h2>Add new Tour</h2>
+      <NewTourForm onAddTour={addTourHandler} />
     </section>
   );
 }
 
-export default NewMeetupPage;
+export default NewTourPage;

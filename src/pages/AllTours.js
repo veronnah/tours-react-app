@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import MeetupList from "../components/meetups/MeetupList";
+import ToursList from "../components/tours/ToursList";
 
-function AllMeetupsPage() {
+function AllToursPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedTours, setLoadedTours] = useState([]);
 
@@ -38,10 +38,10 @@ function AllMeetupsPage() {
 
   return (
     <section>
-      <h1>All Meetups</h1>
-      <MeetupList items={loadedTours} />
+      <h1>All Tours</h1>
+      <ToursList items={loadedTours} />
     </section>
   );
 }
 
-export default AllMeetupsPage;
+export default AllToursPage;
