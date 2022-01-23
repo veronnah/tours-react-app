@@ -10,12 +10,10 @@ const FavoritesContext = createContext({
 
 export function FavoritesContextProvider(props) {
   const [userFavorites, setUserFavorites] = useState([]);
-  let favorites = [];
 
   function addFavoriteHandler(favoriteTour) {
     setUserFavorites((prevUserFavorites) => {
-      favorites = userFavorites.concat(favoriteTour);
-      return favorites;
+      return userFavorites.concat(favoriteTour);
     });
   }
 

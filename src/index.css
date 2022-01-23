@@ -19,3 +19,33 @@ h2 {
   font-size: 1.5rem;
   color: #2c292b;
 }
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff3a;
+  display: grid;
+  place-items: center;
+}
+
+.loader {
+  border: 10px solid #e3e3e3;
+  border-top: 10px solid #443741;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

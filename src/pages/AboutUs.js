@@ -5,10 +5,14 @@ import YoutubePlayer from "../components/ui/YoutubePlayer";
 export class AboutUsPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { date: new Date() };
+    this.state = {
+      date: new Date(),
+    };
   }
+
   componentDidMount() {
     this.timerID = setInterval(() => this.tick(), 1000);
+    this.setState({ isLoading: false });
   }
 
   componentWillUnmount() {
@@ -25,8 +29,7 @@ export class AboutUsPage extends React.Component {
     return (
       <div>
         <h1>About us</h1>
-       
-        <div className='about__us-box'>
+        <div className="about__us-box">
           <img src={require("../assets/img/pic1.jpg")} alt="" />
           <p>
             We are simply dummy text of the printing and typesetting industry.
@@ -40,8 +43,10 @@ export class AboutUsPage extends React.Component {
             PageMaker including versions of Lorem Ipsum.
           </p>
         </div>
-        <h2 className="time-badge"><span>{this.state.date.toLocaleTimeString()}</span></h2>
-        <YoutubePlayer videoId={'4Z9mUjtFJYY'}/>
+        <h2 className="time-badge">
+          <span>{this.state.date.toLocaleTimeString()}</span>
+        </h2>
+        <YoutubePlayer videoId={"4Z9mUjtFJYY"} />
       </div>
     );
   }

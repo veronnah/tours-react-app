@@ -11,9 +11,15 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   font-size: 2rem;
   color: white;
   font-weight: bold;
+}
+
+.logo .navbar__icon {
+  margin-right: 4px;
 }
 
 .header ul {
@@ -28,11 +34,15 @@
   margin-left: 3rem;
 }
 
+.nav__item .active {
+  color: #fff;
+}
+
 .header a {
   text-decoration: none;
   font-size: 1.5rem;
   color: #f5cce9;
-  transition: .3s all;
+  transition: 0.3s all;
 }
 
 .header a:hover,
@@ -47,4 +57,58 @@
   border-radius: 12px;
   padding: 0 1rem;
   margin-left: 0.5rem;
+}
+
+.menu__icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu__icon svg {
+  height: 36px;
+  width: 36px;
+}
+
+.menu__icon svg path {
+  fill: #f5cce9;
+}
+
+@media screen and (max-width: 1080px) {
+  .nav__menu_active {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 80px;
+  }
+
+  .nav__menu ul {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: -180%;
+    opacity: 1;
+  }
+
+  .nav__menu_active ul {
+    width: 100%;
+    flex-direction: column;
+    padding: 32px;
+    background-color: #443741;
+    border-top: 1px solid #443741;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    align-items: center;
+  }
+
+  .nav__menu_active ul li {
+    padding: 20px 10px;
+    margin-left: 0;
+  }
+
+  .menu__icon {
+    display: block;
+  }
 }

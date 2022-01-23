@@ -2,9 +2,6 @@ import React from "react";
 import YouTube from "react-youtube";
 
 export default class YoutubePlayer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const opts = {
       height: "500",

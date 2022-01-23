@@ -31,7 +31,9 @@ function AllToursPage() {
   if (isLoading) {
     return (
       <section>
-        <p>Loading...</p>
+        <div className="loader-wrapper">
+          <div className="loader"></div>
+        </div>
       </section>
     );
   }

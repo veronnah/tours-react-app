@@ -4,6 +4,7 @@
 
 .about__us-box img {
     max-width: 600px;
+    width: 100%;
     margin-right: 20px;
     border-radius: 10px;
     object-fit: cover;
@@ -20,4 +21,10 @@
     border-radius: 4px;
     padding: 0 20px;
     color: #443741;
+}
+
+@media screen and (max-width: 1080px) {
+    .about__us-box {
+        flex-wrap: wrap;
+    }
 }
